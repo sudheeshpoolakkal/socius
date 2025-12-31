@@ -1,0 +1,54 @@
+<svg width="400" height="225" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="400" y2="225" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A0C8D7"/>
+      <stop offset="50%" stop-color="#81B4C9"/>
+      <stop offset="100%" stop-color="#62A0B8"/>
+    </linearGradient>
+    <linearGradient id="bubble1" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D4F1F9"/>
+    </linearGradient>
+    <radialGradient id="glow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#62A0B8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg4)"/>
+  
+  <!-- Glow effects -->
+  <circle cx="120" cy="70" r="60" fill="url(#glow4)" opacity="0.6"/>
+  <circle cx="280" cy="150" r="70" fill="url(#glow4)" opacity="0.5"/>
+  
+  <!-- Speech Bubbles -->
+  <g transform="translate(120, 80)">
+    <ellipse cx="0" cy="0" rx="50" ry="40" fill="url(#bubble1)" opacity="0.95" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M-25,30 L-30,50 L-15,35 Z" fill="url(#bubble1)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Dots in bubble -->
+    <circle cx="-15" cy="0" r="4" fill="#62A0B8"/>
+    <circle cx="0" cy="0" r="4" fill="#62A0B8"/>
+    <circle cx="15" cy="0" r="4" fill="#62A0B8"/>
+  </g>
+  
+  <g transform="translate(280, 140)">
+    <ellipse cx="0" cy="0" rx="55" ry="45" fill="url(#bubble1)" opacity="0.95" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M30,30 L40,50 L25,35 Z" fill="url(#bubble1)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Sound waves -->
+    <path d="M-20,-10 Q-10,0 -20,10" stroke="#62A0B8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M-5,-5 Q5,0 -5,5" stroke="#62A0B8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M10,-10 Q20,0 10,10" stroke="#62A0B8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Connection line -->
+  <path d="M140,100 Q200,80 260,120" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="5,5" opacity="0.5" fill="none"/>
+  
+  <!-- Bottom Text Area -->
+  <text x="200" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    Artful Communication
+  </text>
+</svg>

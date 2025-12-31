@@ -1,0 +1,94 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="skyBg" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C5E8F3"/>
+      <stop offset="50%" stop-color="#A9D6E5"/>
+      <stop offset="100%" stop-color="#89B5C9"/>
+    </linearGradient>
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#E8F4F8"/>
+      <stop offset="100%" stop-color="#B8D4E3"/>
+    </linearGradient>
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0F8FB"/>
+      <stop offset="60%" stop-color="#D4E8F0"/>
+      <stop offset="100%" stop-color="#A0C8D7"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FFF9E6"/>
+      <stop offset="100%" stop-color="#FFE6B3"/>
+    </radialGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFE6B3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="1200" height="300" fill="url(#skyBg)"/>
+  
+  <!-- Sun -->
+  <circle cx="900" cy="80" r="80" fill="url(#sunGlow)"/>
+  <circle cx="900" cy="80" r="45" fill="url(#sun)"/>
+  
+  <!-- Sun rays (subtle) -->
+  <g opacity="0.3">
+    <line x1="900" y1="20" x2="900" y2="0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="900" y1="160" x2="900" y2="140" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="840" y1="80" x2="820" y2="80" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="980" y1="80" x2="960" y2="80" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Background Mountains -->
+  <path d="M0,220 L150,140 L300,200 L450,120 L600,180 L750,100 L900,160 L1050,90 L1200,150 L1200,300 L0,300 Z" 
+        fill="url(#mountain2)" opacity="0.6"/>
+  
+  <!-- Mid Mountains -->
+  <path d="M0,240 L200,160 L400,220 L600,140 L800,200 L1000,130 L1200,190 L1200,300 L0,300 Z" 
+        fill="url(#mountain2)" opacity="0.8"/>
+  
+  <!-- Front Mountains with snow caps -->
+  <path d="M0,270 L100,210 L250,190 L350,240 L500,170 L650,220 L800,180 L950,230 L1100,200 L1200,250 L1200,300 L0,300 Z" 
+        fill="url(#mountain1)"/>
+  
+  <!-- Snow caps on front mountains -->
+  <g opacity="0.9">
+    <path d="M250,190 L230,210 L270,210 Z" fill="#FFFFFF"/>
+    <path d="M500,170 L480,195 L520,195 Z" fill="#FFFFFF"/>
+    <path d="M800,180 L780,205 L820,205 Z" fill="#FFFFFF"/>
+    <path d="M1100,200 L1080,225 L1120,225 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Sparkles/Snow particles -->
+  <g opacity="0.7">
+    <circle cx="200" cy="100" r="2" fill="#FFFFFF"/>
+    <circle cx="450" cy="80" r="1.5" fill="#FFFFFF"/>
+    <circle cx="650" cy="120" r="2.5" fill="#FFFFFF"/>
+    <circle cx="800" cy="70" r="2" fill="#FFFFFF"/>
+    <circle cx="1000" cy="110" r="1.5" fill="#FFFFFF"/>
+    <circle cx="300" cy="150" r="2" fill="#FFFFFF"/>
+    <circle cx="550" cy="130" r="1.5" fill="#FFFFFF"/>
+    <circle cx="100" cy="90" r="2" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Ice crystals floating -->
+  <g opacity="0.5">
+    <path d="M150,60 L152,58 L150,56 L148,58 Z" fill="#FFFFFF"/>
+    <path d="M380,50 L382,48 L380,46 L378,48 Z" fill="#FFFFFF"/>
+    <path d="M720,90 L722,88 L720,86 L718,88 Z" fill="#FFFFFF"/>
+    <path d="M1050,70 L1052,68 L1050,66 L1048,68 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Text overlay -->
+  <g opacity="0.9">
+    <text x="600" y="140" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="900" fill="#FFFFFF" stroke="#89B5C9" stroke-width="2">
+      Arendelle Academy
+    </text>
+    <text x="600" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">
+      Journey into Your Inner Magic
+    </text>
+  </g>
+</svg>

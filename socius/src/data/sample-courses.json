@@ -1,0 +1,582 @@
+{
+  "courses": [
+    {
+      "_id": "1",
+      "title": "Mindfulness and Meditation Fundamentals",
+      "description": "Learn the core principles of mindfulness and meditation to reduce stress and increase mental clarity. This course teaches you how to develop a consistent practice that can transform your daily life.",
+      "category": "mindfulness",
+      "level": "Beginner",
+      "duration": 180,
+      "totalEnrollments": 2450,
+      "rating": 4.8,
+      "ratingCount": 320,
+      "instructor": "Dr. Sarah Johnson",
+      "thumbnail": "/api/placeholder/400/225",
+      "modules": [
+        {
+          "_id": "m1",
+          "title": "Introduction to Mindfulness",
+          "description": "Understanding what mindfulness is and how it can benefit your daily life",
+          "duration": 60,
+          "lessons": [
+            {
+              "_id": "l1",
+              "title": "What is Mindfulness?",
+              "description": "Introduction to the concept of mindfulness and its benefits",
+              "type": "video",
+              "duration": 15,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l2",
+              "title": "Common Misconceptions",
+              "description": "Addressing common myths and misconceptions about mindfulness",
+              "type": "text",
+              "duration": 10,
+              "content": "<p>Many people think mindfulness is about stopping thoughts or emptying the mind. That's not accurate. Mindfulness is about noticing thoughts without being carried away by them.</p>"
+            },
+            {
+              "_id": "l3",
+              "title": "Setting Your Intentions",
+              "description": "How to set realistic intentions for your mindfulness journey",
+              "type": "exercise",
+              "duration": 5,
+              "content": "Write down 3 intentions you have for starting a mindfulness practice. These should be personal to you and focus on what you hope to gain or experience."
+            }
+          ]
+        },
+        {
+          "_id": "m2",
+          "title": "Basic Meditation Techniques",
+          "description": "Learn fundamental meditation techniques to build a strong foundation",
+          "duration": 80,
+          "lessons": [
+            {
+              "_id": "l4",
+              "title": "Breath Awareness Meditation",
+              "description": "Learn the foundational practice of breath awareness",
+              "type": "video",
+              "duration": 25,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l5",
+              "title": "Body Scan Practice",
+              "description": "Develop awareness of physical sensations in your body",
+              "type": "audio",
+              "duration": 20,
+              "audioUrl": ""
+            },
+            {
+              "_id": "l6",
+              "title": "Walking Meditation",
+              "description": "Practice mindfulness while moving",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Walking meditation brings mindfulness into movement. It's a wonderful way to practice awareness while engaging with the world around you.</p>"
+            },
+            {
+              "_id": "l7",
+              "title": "Practice Session",
+              "description": "Apply what you've learned in a guided practice session",
+              "type": "exercise",
+              "duration": 20,
+              "content": "Practice breath awareness meditation for 10 minutes. Notice your breathing without trying to change it. When your mind wanders, gently bring attention back to the breath."
+            }
+          ]
+        },
+        {
+          "_id": "m3",
+          "title": "Integrating Mindfulness into Daily Life",
+          "description": "Practical ways to bring mindfulness into your everyday activities",
+          "duration": 40,
+          "lessons": [
+            {
+              "_id": "l8",
+              "title": "Mindful Eating",
+              "description": "Cultivate awareness during meals and snacks",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Mindful eating involves paying full attention to the experience of eating and drinking, both inside and outside the body.</p>"
+            },
+            {
+              "_id": "l9",
+              "title": "Mindful Communication",
+              "description": "Improve your relationships through mindful communication",
+              "type": "video",
+              "duration": 25,
+              "videoUrl": ""
+            }
+          ]
+        }
+      ],
+      "prerequisites": [
+        "None required",
+        "Open mind to new experiences"
+      ],
+      "outcomes": [
+        "Develop a consistent mindfulness practice",
+        "Reduce stress and anxiety levels",
+        "Improve focus and concentration",
+        "Enhance emotional regulation skills",
+        "Increase self-awareness"
+      ]
+    },
+    {
+      "_id": "2",
+      "title": "Cognitive Behavioral Therapy (CBT) Techniques",
+      "description": "Master evidence-based CBT techniques to challenge negative thoughts, improve mood, and develop healthier thinking patterns. This course provides practical tools you can use immediately.",
+      "category": "therapy",
+      "level": "Intermediate",
+      "duration": 240,
+      "totalEnrollments": 1875,
+      "rating": 4.9,
+      "ratingCount": 285,
+      "instructor": "Dr. Michael Chen",
+      "thumbnail": "/api/placeholder/400/225",
+      "modules": [
+        {
+          "_id": "m4",
+          "title": "Understanding CBT Basics",
+          "description": "Learn the core principles and foundations of Cognitive Behavioral Therapy",
+          "duration": 90,
+          "lessons": [
+            {
+              "_id": "l10",
+              "title": "Introduction to CBT",
+              "description": "Overview of Cognitive Behavioral Therapy and its effectiveness",
+              "type": "video",
+              "duration": 30,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l11",
+              "title": "The CBT Model",
+              "description": "Understanding the connection between thoughts, feelings, and behaviors",
+              "type": "text",
+              "duration": 20,
+              "content": "<p>The CBT model suggests that thoughts, feelings and behaviors are interconnected. Changing one element can influence the others.</p>"
+            },
+            {
+              "_id": "l12",
+              "title": "Identifying Thought Patterns",
+              "description": "Learn how to recognize common cognitive distortions",
+              "type": "exercise",
+              "duration": 40,
+              "content": "Keep a thought record for one week. Write down situations that trigger strong emotions, the thoughts that occurred, and rate the emotions from 0-100."
+            }
+          ]
+        },
+        {
+          "_id": "m5",
+          "title": "Challenging Negative Thoughts",
+          "description": "Learn practical techniques to question and reframe unhelpful thoughts",
+          "duration": 100,
+          "lessons": [
+            {
+              "_id": "l13",
+              "title": "Cognitive Restructuring",
+              "description": "Step-by-step process to challenge negative thoughts",
+              "type": "video",
+              "duration": 35,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l14",
+              "title": "Evidence-Based Thinking",
+              "description": "Using evidence to challenge distorted thoughts",
+              "type": "text",
+              "duration": 25,
+              "content": "<p>Evidence-based thinking involves looking for facts that support and contradict your thoughts, rather than accepting them as absolute truths.</p>"
+            },
+            {
+              "_id": "l15",
+              "title": "Thought Challenging Practice",
+              "description": "Apply cognitive restructuring in real-life situations",
+              "type": "exercise",
+              "duration": 40,
+              "content": "Select a recent negative thought. Use the 5-column thought record to challenge it: Situation, Emotions, Automatic Thought, Evidence For/Evidence Against, Balanced Thought."
+            }
+          ]
+        },
+        {
+          "_id": "m6",
+          "title": "Behavioral Activation",
+          "description": "Use behavioral techniques to improve mood and increase positive activities",
+          "duration": 50,
+          "lessons": [
+            {
+              "_id": "l16",
+              "title": "Activity Scheduling",
+              "description": "Plan and track meaningful activities",
+              "type": "text",
+              "duration": 25,
+              "content": "<p>Activity scheduling helps you plan and engage in activities that provide a sense of pleasure or accomplishment.</p>"
+            },
+            {
+              "_id": "l17",
+              "title": "Graded Exposure",
+              "description": "Gradually approach feared situations",
+              "type": "video",
+              "duration": 25,
+              "videoUrl": ""
+            }
+          ]
+        }
+      ],
+      "prerequisites": [
+        "Basic understanding of psychology concepts",
+        "Willingness to examine your thought patterns"
+      ],
+      "outcomes": [
+        "Identify and challenge negative thought patterns",
+        "Use practical techniques to improve mood",
+        "Develop healthier thinking habits",
+        "Apply CBT tools in daily life",
+        "Improve emotional regulation skills"
+      ]
+    },
+    {
+      "_id": "3",
+      "title": "Stress Management and Resilience Building",
+      "description": "Develop effective strategies to manage stress and build psychological resilience. Learn to bounce back from setbacks and maintain emotional balance during challenging times.",
+      "category": "wellness",
+      "level": "Beginner",
+      "duration": 150,
+      "totalEnrollments": 3240,
+      "rating": 4.7,
+      "ratingCount": 410,
+      "instructor": "Dr. Emma Rodriguez",
+      "thumbnail": "/api/placeholder/400/225",
+      "modules": [
+        {
+          "_id": "m7",
+          "title": "Understanding Stress",
+          "description": "Learn about stress, its causes, and its impact on your body and mind",
+          "duration": 60,
+          "lessons": [
+            {
+              "_id": "l18",
+              "title": "What is Stress?",
+              "description": "Understanding the stress response and its effects",
+              "type": "video",
+              "duration": 20,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l19",
+              "title": "Types of Stress",
+              "description": "Identify different types of stress and their sources",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Stress can be acute (short-term) or chronic (long-term). Understanding the difference helps in applying appropriate coping strategies.</p>"
+            },
+            {
+              "_id": "l20",
+              "title": "Stress Assessment",
+              "description": "Evaluate your current stress levels and triggers",
+              "type": "exercise",
+              "duration": 25,
+              "content": "Complete a stress inventory by listing current stressors in your life. Rate each from 1-10 based on how much stress it causes you."
+            }
+          ]
+        },
+        {
+          "_id": "m8",
+          "title": "Stress Management Techniques",
+          "description": "Learn practical techniques to manage and reduce stress",
+          "duration": 55,
+          "lessons": [
+            {
+              "_id": "l21",
+              "title": "Relaxation Techniques",
+              "description": "Practice various relaxation methods",
+              "type": "video",
+              "duration": 20,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l22",
+              "title": "Time Management",
+              "description": "Organize your time to reduce stress",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Effective time management involves setting priorities, breaking tasks into smaller steps, and learning to say no to non-essential activities.</p>"
+            },
+            {
+              "_id": "l23",
+              "title": "Breathing Exercises",
+              "description": "Use breathing techniques to calm your nervous system",
+              "type": "audio",
+              "duration": 20,
+              "audioUrl": ""
+            }
+          ]
+        },
+        {
+          "_id": "m9",
+          "title": "Building Resilience",
+          "description": "Develop psychological resilience to bounce back from setbacks",
+          "duration": 35,
+          "lessons": [
+            {
+              "_id": "l24",
+              "title": "Resilience Factors",
+              "description": "Understand the key factors that contribute to resilience",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Resilience is the ability to adapt well in the face of adversity. Key factors include social support, positive thinking, and problem-solving skills.</p>"
+            },
+            {
+              "_id": "l25",
+              "title": "Developing a Growth Mindset",
+              "description": "Cultivate a mindset that embraces challenges",
+              "type": "video",
+              "duration": 20,
+              "videoUrl": ""
+            }
+          ]
+        }
+      ],
+      "prerequisites": [
+        "None required",
+        "Willingness to make lifestyle changes"
+      ],
+      "outcomes": [
+        "Identify personal stress triggers",
+        "Apply effective stress management techniques",
+        "Build psychological resilience",
+        "Maintain emotional balance during challenges",
+        "Develop healthy coping strategies"
+      ]
+    },
+    {
+      "_id": "4",
+      "title": "Emotional Intelligence Development",
+      "description": "Enhance your emotional intelligence to improve relationships, decision-making, and overall well-being. Learn to understand and manage emotions effectively.",
+      "category": "personal-growth",
+      "level": "Intermediate",
+      "duration": 210,
+      "totalEnrollments": 1680,
+      "rating": 4.8,
+      "ratingCount": 290,
+      "instructor": "Dr. James Wilson",
+      "thumbnail": "/api/placeholder/400/225",
+      "modules": [
+        {
+          "_id": "m10",
+          "title": "Self-Awareness",
+          "description": "Develop awareness of your own emotions and their impact",
+          "duration": 80,
+          "lessons": [
+            {
+              "_id": "l26",
+              "title": "Emotional Self-Awareness",
+              "description": "Recognize your emotions as they happen",
+              "type": "video",
+              "duration": 25,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l27",
+              "title": "Understanding Triggers",
+              "description": "Identify what triggers different emotions in you",
+              "type": "exercise",
+              "duration": 35,
+              "content": "Keep an emotion journal for one week. Record your emotions, the situation that triggered them, and how you responded."
+            },
+            {
+              "_id": "l28",
+              "title": "Emotional Patterns",
+              "description": "Recognize recurring emotional patterns",
+              "type": "text",
+              "duration": 20,
+              "content": "<p>Emotional patterns are predictable reactions that occur in similar situations. Recognizing these patterns is the first step to managing them effectively.</p>"
+            }
+          ]
+        },
+        {
+          "_id": "m11",
+          "title": "Self-Management",
+          "description": "Learn to manage your emotions and responses effectively",
+          "duration": 75,
+          "lessons": [
+            {
+              "_id": "l29",
+              "title": "Emotional Regulation",
+              "description": "Techniques to manage intense emotions",
+              "type": "video",
+              "duration": 25,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l30",
+              "title": "Impulse Control",
+              "description": "Pause before reacting to emotions",
+              "type": "text",
+              "duration": 20,
+              "content": "<p>Impulse control involves pausing to think before acting, which can prevent regrettable reactions and promote better decision-making.</p>"
+            },
+            {
+              "_id": "l31",
+              "title": "Stress Management",
+              "description": "Manage stress without being overwhelmed",
+              "type": "audio",
+              "duration": 30,
+              "audioUrl": ""
+            }
+          ]
+        },
+        {
+          "_id": "m12",
+          "title": "Social Awareness and Relationship Management",
+          "description": "Improve your ability to understand others and manage relationships",
+          "duration": 55,
+          "lessons": [
+            {
+              "_id": "l32",
+              "title": "Empathy Development",
+              "description": "Understand and share others' emotions",
+              "type": "text",
+              "duration": 25,
+              "content": "<p>Empathy involves understanding others' perspectives and feelings without necessarily agreeing with them.</p>"
+            },
+            {
+              "_id": "l33",
+              "title": "Effective Communication",
+              "description": "Express emotions clearly and listen effectively",
+              "type": "video",
+              "duration": 30,
+              "videoUrl": ""
+            }
+          ]
+        }
+      ],
+      "prerequisites": [
+        "Basic self-reflection skills",
+        "Willingness to examine your emotional responses"
+      ],
+      "outcomes": [
+        "Increase self-awareness of emotions",
+        "Improve emotional regulation skills",
+        "Develop empathy and social awareness",
+        "Enhance relationship management abilities",
+        "Make better decisions under emotional pressure"
+      ]
+    },
+    {
+      "_id": "5",
+      "title": "Sleep Hygiene and Quality Improvement",
+      "description": "Transform your sleep quality with evidence-based techniques and strategies. Learn to create optimal conditions for restorative sleep and improve your daily performance.",
+      "category": "wellness",
+      "level": "Beginner",
+      "duration": 120,
+      "totalEnrollments": 2950,
+      "rating": 4.6,
+      "ratingCount": 360,
+      "instructor": "Dr. Lisa Thompson",
+      "thumbnail": "/api/placeholder/400/225",
+      "modules": [
+        {
+          "_id": "m13",
+          "title": "Understanding Sleep",
+          "description": "Learn about sleep cycles, stages, and their importance",
+          "duration": 45,
+          "lessons": [
+            {
+              "_id": "l34",
+              "title": "Sleep Architecture",
+              "description": "Understanding sleep stages and cycles",
+              "type": "video",
+              "duration": 20,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l35",
+              "title": "Benefits of Quality Sleep",
+              "description": "How sleep impacts health, mood, and performance",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Quality sleep is essential for cognitive function, emotional regulation, physical health, and immune system function.</p>"
+            },
+            {
+              "_id": "l36",
+              "title": "Sleep Assessment",
+              "description": "Evaluate your current sleep patterns",
+              "type": "exercise",
+              "duration": 10,
+              "content": "Track your sleep for one week including bedtime, wake time, sleep quality rating, and factors affecting sleep (e.g., caffeine, stress)."
+            }
+          ]
+        },
+        {
+          "_id": "m14",
+          "title": "Sleep Hygiene Practices",
+          "description": "Create optimal conditions for sleep",
+          "duration": 45,
+          "lessons": [
+            {
+              "_id": "l37",
+              "title": "Bedroom Environment",
+              "description": "Optimize your sleep environment",
+              "type": "video",
+              "duration": 15,
+              "videoUrl": ""
+            },
+            {
+              "_id": "l38",
+              "title": "Pre-Sleep Routine",
+              "description": "Create a consistent wind-down routine",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>A consistent pre-sleep routine signals to your body that it's time to sleep and helps you unwind from the day.</p>"
+            },
+            {
+              "_id": "l39",
+              "title": "Sleep Schedule",
+              "description": "Maintain consistent sleep and wake times",
+              "type": "exercise",
+              "duration": 15,
+              "content": "Set a consistent bedtime and wake time, even on weekends. Gradually adjust your schedule by 15 minutes if needed."
+            }
+          ]
+        },
+        {
+          "_id": "m15",
+          "title": "Overcoming Sleep Challenges",
+          "description": "Address common sleep problems and solutions",
+          "duration": 30,
+          "lessons": [
+            {
+              "_id": "l40",
+              "title": "Insomnia Solutions",
+              "description": "Strategies for addressing difficulty falling or staying asleep",
+              "type": "text",
+              "duration": 15,
+              "content": "<p>Insomnia can be addressed through sleep restriction, stimulus control, and cognitive restructuring techniques.</p>"
+            },
+            {
+              "_id": "l41",
+              "title": "Coping with Stress and Racing Thoughts",
+              "description": "Techniques to calm your mind before sleep",
+              "type": "audio",
+              "duration": 15,
+              "audioUrl": ""
+            }
+          ]
+        }
+      ],
+      "prerequisites": [
+        "None required",
+        "Willingness to establish consistent sleep routines"
+      ],
+      "outcomes": [
+        "Improve sleep quality and duration",
+        "Establish healthy sleep habits",
+        "Address common sleep problems",
+        "Increase daytime energy and focus",
+        "Enhance overall health and well-being"
+      ]
+    }
+  ]
+}

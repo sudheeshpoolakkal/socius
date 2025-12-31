@@ -1,0 +1,44 @@
+{
+  "name": "socius-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --require dotenv/config --no-config --timeout 30000 --exit --file test/setup.js ./test/**/*.test.js",
+    "start": "nodemon server.js",
+    "server": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@react-google-maps/api": "^2.20.7",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.5",
+    "currency-converter-lt": "^2.0.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.1",
+    "express-fileupload": "^1.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.6.0",
+    "mongoose": "^8.7.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^3.0.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10",
+    "razorpay": "^2.9.5",
+    "streamifier": "^0.1.1",
+    "validator": "^13.12.0"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "chai": "^6.0.1",
+    "mocha": "^11.7.2",
+    "mongodb-memory-server": "^10.2.1",
+    "supertest": "^7.1.4"
+  }
+}

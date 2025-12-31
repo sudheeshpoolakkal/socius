@@ -1,0 +1,57 @@
+<svg width="400" height="225" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="400" y2="225" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C5E8F3"/>
+      <stop offset="50%" stop-color="#A0D9E8"/>
+      <stop offset="100%" stop-color="#7EC8DD"/>
+    </linearGradient>
+    <radialGradient id="lotus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F0A8D0"/>
+      <stop offset="70%" stop-color="#E88EBD"/>
+      <stop offset="100%" stop-color="#D674AB"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7EC8DD" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg3)"/>
+  
+  <!-- Soft glow -->
+  <circle cx="200" cy="112" r="120" fill="url(#glow3)" opacity="0.5"/>
+  
+  <!-- Lotus Flower -->
+  <g transform="translate(200, 112)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-35" rx="20" ry="35" fill="url(#lotus)" opacity="0.9" transform="rotate(315)"/>
+    
+    <!-- Center -->
+    <circle cx="0" cy="0" r="18" fill="#FFE66D"/>
+    <circle cx="0" cy="0" r="12" fill="#FECA57"/>
+    
+    <!-- Decorative dots -->
+    <circle cx="0" cy="-5" r="2" fill="#FF6B6B"/>
+    <circle cx="-4" cy="0" r="2" fill="#4ECDC4"/>
+    <circle cx="4" cy="0" r="2" fill="#95E1D3"/>
+    <circle cx="0" cy="5" r="2" fill="#A8E6CF"/>
+  </g>
+  
+  <!-- Ripple effect -->
+  <circle cx="200" cy="112" r="80" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+  <circle cx="200" cy="112" r="95" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.2"/>
+  
+  <!-- Bottom Text Area -->
+  <text x="200" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    Inner Stillness
+  </text>
+</svg>
