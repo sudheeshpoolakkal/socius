@@ -4,7 +4,6 @@ import { AppContext } from "@/context/AppContext.jsx";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import bg3 from "@/assets/assets_frontend/aurora.webp";
-import { Ghost } from "lucide-react";
 
 const Login = () => {
   const { backendUrl, token, setToken } = useContext(AppContext);
@@ -60,13 +59,7 @@ const Login = () => {
       style={{ backgroundImage: `url(${bg3})` }}
     >
       {/* Anonymous Button at the top-left corner */}
-      <button
-        onClick={() => navigate("/gateway")}
-        className="absolute top-12 left-12 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-none transition-colors"
-        title="Anonymous Login"
-      >
-        <Ghost className="h-5 w-5" />
-      </button>
+
 
       {/* Cross Icon Button at the top-right corner */}
       <button

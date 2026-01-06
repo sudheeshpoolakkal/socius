@@ -13,7 +13,7 @@ const Wallet = () => {
     const fetchWalletData = async () => {
         try {
             const { data } = await axios.get(backendUrl + '/api/user/wallet', {
-                headers: { token }
+                headers: { Authorization: `Bearer ${token}` }
             })
             if (data.success) {
                 setBalance(data.balance)
@@ -36,7 +36,7 @@ const Wallet = () => {
         }
         try {
             const { data } = await axios.post(backendUrl + '/api/user/add-funds', { amount }, {
-                headers: { token }
+                headers: { Authorization: `Bearer ${token}` }
             })
             if (data.success) {
                 toast.success(data.message)

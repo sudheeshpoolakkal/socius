@@ -15,6 +15,9 @@ const AddItem = () => {
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState(categories[0]);
     const [deposit, setDeposit] = useState('');
+    const [price, setPrice] = useState('');
+    const [isBuyable, setIsBuyable] = useState(false);
+    const [isBorrowable, setIsBorrowable] = useState(true);
     const [address, setAddress] = useState(''); // Simple string for now
     const [image, setImage] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -68,6 +71,9 @@ const AddItem = () => {
             formData.append('description', description);
             formData.append('category', category);
             formData.append('deposit', deposit);
+            formData.append('price', price);
+            formData.append('isBuyable', isBuyable);
+            formData.append('isBorrowable', isBorrowable);
             formData.append('address', JSON.stringify({ line1: address, formatted: address })); // Hack for object
             formData.append('image', image);
 
@@ -150,17 +156,62 @@ const AddItem = () => {
                     </select>
                 </div>
 
-                {/* Deposit */}
-                <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Refundable Deposit (₹)</label>
-                    <input
-                        type="number"
-                        required
-                        value={deposit}
-                        onChange={(e) => setDeposit(e.target.value)}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-primary outline-none"
-                        placeholder="0"
-                    />
+                {/* Listing Type Selection */}
+                <div className="flex gap-6">
+                    <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-lg hover:bg-gray-50 transition flex-1">
+                        <input
+                            type="checkbox"
+                            checked={isBorrowable}
+                            onChange={(e) => setIsBorrowable(e.target.checked)}
+                            className="w-5 h-5 text-primary rounded border-gray-300 focus:ring-primary"
+                        />
+                        <span className="font-medium text-gray-700">Available for Borrow (Rent)</span>
+                    </label>
+
+                    <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-lg hover:bg-gray-50 transition flex-1">
+                        <input
+                            type="checkbox"
+                            checked={isBuyable}
+                            onChange={(e) => setIsBuyable(e.target.checked)}
+                            className="w-5 h-5 text-primary rounded border-gray-300 focus:ring-primary"
+                        />
+                        <span className="font-medium text-gray-700">Available for Sale</span>
+                    </label>
+                </div>
+
+                {/* Price & Deposit */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {isBorrowable && (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Refundable Deposit (₹)
+                            </label>
+                            <input
+                                type="number"
+                                required={isBorrowable}
+                                value={deposit}
+                                onChange={(e) => setDeposit(e.target.value)}
+                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-primary outline-none"
+                                placeholder="e.g. 500"
+                            />
+                        </div>
+                    )}
+
+                    {isBuyable && (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Selling Price (₹)
+                            </label>
+                            <input
+                                type="number"
+                                required={isBuyable}
+                                value={price}
+                                onChange={(e) => setPrice(e.target.value)}
+                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-primary outline-none"
+                                placeholder="e.g. 1500"
+                            />
+                        </div>
+                    )}
                 </div>
 
                 {/* Address */}

@@ -9,7 +9,8 @@ import {
     Heart,
     Sparkles,
     Share2,
-    HandHeart
+    HandHeart,
+    Crown
 } from 'lucide-react';
 
 const Hero = () => {
@@ -60,11 +61,11 @@ const Hero = () => {
                             </button>
 
                             <button
-                                onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}
+                                onClick={() => navigate('/membership')}
                                 className="group px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 font-bold rounded-2xl border border-slate-200/50 hover:border-slate-300 hover:bg-white hover:shadow-lg transition-all duration-300 active:scale-95 flex items-center gap-2"
                             >
-                                <Sparkles size={18} className="text-amber-500" />
-                                <span>Browse Categories</span>
+                                <Crown size={18} className="text-amber-500" />
+                                <span>Join Neighbourhood</span>
                             </button>
                         </div>
 

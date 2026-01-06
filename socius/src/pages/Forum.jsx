@@ -297,14 +297,14 @@ const Forum = () => {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden">
+            <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
                   <Filter size={16} />
                 </div>
                 <h3 className="font-bold text-slate-800">Categories</h3>
               </div>
-              <div className="space-y-1.5 max-h-[400px] overflow-y-auto no-scrollbar">
+              <div className="space-y-1.5">
                 {categories.map((category) => (
                   <button
                     key={category.id}
@@ -324,24 +324,43 @@ const Forum = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-emerald-600 p-8 rounded-[2.5rem] text-white shadow-xl shadow-blue-100 relative overflow-hidden group">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="relative rounded-[2.5rem] overflow-hidden bg-slate-950 p-8 shadow-2xl group">
+              {/* Premium Background Layer */}
+              <div className="absolute inset-0">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-600/30 transition-colors"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-emerald-600/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 group-hover:bg-emerald-600/30 transition-colors"></div>
+              </div>
+
               <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-6">
-                  <TrendingUp size={18} className="text-white" />
-                  <h3 className="font-bold">Urgent Needs</h3>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-blue-400">
+                    <TrendingUp size={16} />
+                  </div>
+                  <h3 className="font-bold text-white tracking-tight">Urgent Needs</h3>
                 </div>
-                <div className="space-y-4">
+
+                <div className="space-y-6">
                   {trendingPosts.map((post) => (
                     <div key={post._id} className="group/item cursor-pointer">
-                      <h4 className="text-sm font-bold line-clamp-1 group-hover/item:translate-x-1 transition-transform">{post.title}</h4>
-                      <div className="flex items-center mt-1 text-[10px] text-white/60 font-bold uppercase tracking-widest">
-                        <Heart className="w-3 h-3 mr-1 fill-white/20" />
-                        <span>{Array.isArray(post.upvotes) ? post.upvotes.length : post.upvotes || 0} supporters</span>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-sm font-bold text-slate-200 line-clamp-1 group-hover/item:text-white transition-colors">
+                            {post.title}
+                          </h4>
+                          <div className="flex items-center mt-2 text-[10px] font-black uppercase tracking-widest text-slate-500 group-hover/item:text-slate-400 transition-colors">
+                            <Heart className="w-3 h-3 mr-1.5" />
+                            <span>{Array.isArray(post.upvotes) ? post.upvotes.length : post.upvotes || 0} Supporters</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
+
+                <button className="mt-8 w-full py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-slate-400 hover:bg-white/10 hover:text-white transition-all uppercase tracking-widest">
+                  View All Urgent
+                </button>
               </div>
             </div>
           </aside>

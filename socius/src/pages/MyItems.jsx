@@ -87,7 +87,7 @@ const MyItems = () => {
                                                 onClick={() => updateRequestStatus(request._id, 'approved')}
                                                 className="flex-1 md:flex-none px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 font-medium text-sm transition shadow-sm"
                                             >
-                                                Approve Request
+                                                {request.type === 'buy' ? `Accept Offer (\u20B9${request.offerPrice})` : 'Approve Request'}
                                             </button>
                                         </>
                                     ) : (

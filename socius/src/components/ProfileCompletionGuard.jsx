@@ -11,10 +11,7 @@ const ProfileCompletionGuard = ({ children }) => {
     return children;
   }
 
-  // If the user is anonymous, bypass all profile completion checks.
-  if (userData.isAnonymous) {
-    return children;
-  }
+
 
   const { image } = userData;
   const currentPath = location.pathname;

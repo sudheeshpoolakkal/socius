@@ -111,6 +111,67 @@ const AppContextProvider = (props) => {
     }
   };
 
+  const renewUserRequest = async (requestId, duration) => {
+    try {
+      const { data } = await axios.post(backendUrl + '/api/user/renew-request', { requestId, duration }, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (data.success) {
+        toast.success(data.message);
+        loadRequests(); // Refresh list
+        return true;
+      } else {
+        toast.error(data.message);
+        return false;
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message);
+      return false;
+    }
+  };
+
+  const tipAndRateUser = async (requestId, tipAmount, rating) => {
+    try {
+      const { data } = await axios.post(backendUrl + '/api/user/tip-rate-owner', { requestId, tipAmount, rating }, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (data.success) {
+        toast.success(data.message);
+        loadRequests(); // Refresh list
+        return true;
+      } else {
+        toast.error(data.message);
+        return false;
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message);
+      return false;
+    }
+  };
+
+  const completePurchase = async (requestId) => {
+    try {
+      const { data } = await axios.post(backendUrl + '/api/user/complete-purchase', { requestId }, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (data.success) {
+        toast.success(data.message);
+        loadRequests(); // Refresh list to show completed
+        loadUserProfileData(); // Refresh wallet balance
+        return true;
+      } else {
+        toast.error(data.message);
+        return false;
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message);
+      return false;
+    }
+  };
+
   // Helper to find specific item
   const getItemById = (itemId) => {
     return items.find(item => item._id === itemId);
@@ -158,6 +219,9 @@ const AppContextProvider = (props) => {
     incomingRequests,
     getIncomingRequestsData,
     updateRequestStatus,
+    renewUserRequest,
+    tipAndRateUser,
+    completePurchase,
     logout,
     getItemById,
   };

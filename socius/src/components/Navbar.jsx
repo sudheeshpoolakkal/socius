@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets_frontend/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import MembershipDetailsModal from "./MembershipDetailsModal";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { token, setToken, userData } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
+  const [showMembershipModal, setShowMembershipModal] = useState(false);
 
   const logout = () => {
     setToken(false);
@@ -51,7 +53,7 @@ const Navbar = () => {
 
           {/* Desktop Menu - centered */}
           <ul className="hidden md:flex items-center gap-8 font-medium absolute left-1/2 transform -translate-x-1/2">
-            {["/", "/inventory", "/community", "/about", "/contact"].map((path, index) => (
+            {["/", "/inventory", "/community", "/membership?view=start", "/about", "/contact"].map((path, index) => (
               <li key={index} className="relative group">
                 <NavLink
                   to={path}
@@ -67,7 +69,7 @@ const Navbar = () => {
                     letterSpacing: "0.03em",
                   }}
                 >
-                  {path === "/" ? "Home" : path === "/community" ? "Request Item" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                  {path === "/" ? "Home" : path === "/community" ? "Request Item" : path.includes("membership") ? "Membership" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
                 </NavLink>
                 <hr className="absolute left-0 bottom-0 w-0 group-hover:w-3/5 transition-all duration-300 h-0.5 bg-primary" />
               </li>
@@ -104,10 +106,22 @@ const Navbar = () => {
                     My Requests
                   </p>
                   <p
+                    onClick={() => navigate("/my-borrowings")}
+                    className="hover:text-black cursor-pointer py-2 whitespace-nowrap hover:bg-gray-50 rounded px-2 -mx-2"
+                  >
+                    Borrowed Items
+                  </p>
+                  <p
                     onClick={() => navigate("/wallet")}
                     className="hover:text-black cursor-pointer py-2 whitespace-nowrap hover:bg-gray-50 rounded px-2 -mx-2"
                   >
                     My Wallet
+                  </p>
+                  <p
+                    onClick={() => setShowMembershipModal(true)}
+                    className="hover:text-black cursor-pointer py-2 whitespace-nowrap hover:bg-gray-50 rounded px-2 -mx-2"
+                  >
+                    Membership
                   </p>
 
                   <p
@@ -170,7 +184,7 @@ const Navbar = () => {
         </div>
         <div className="py-6">
           <ul className="flex flex-col gap-1 px-4">
-            {["/", "/inventory", "/community", "/about", "/contact"].map(
+            {["/", "/inventory", "/community", "/membership?view=start", "/about", "/contact"].map(
               (path, index) => (
                 <li key={index} className="w-full">
                   <NavLink
@@ -183,7 +197,7 @@ const Navbar = () => {
                       }`
                     }
                   >
-                    {path === "/" ? "Home" : path === "/community" ? "Request Item" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                    {path === "/" ? "Home" : path === "/community" ? "Request Item" : path.includes("membership") ? "Membership" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
                   </NavLink>
                 </li>
               )
@@ -236,12 +250,30 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => {
+                  navigate("/my-borrowings");
+                  setShowMenu(false);
+                }}
+                className="w-full text-left px-4 py-3 text-gray-700 hover:bg-white hover:shadow-sm rounded-lg transition-all duration-200 font-medium"
+              >
+                🎒 Borrowed Items
+              </button>
+              <button
+                onClick={() => {
                   navigate("/wallet");
                   setShowMenu(false);
                 }}
                 className="w-full text-left px-4 py-3 text-gray-700 hover:bg-white hover:shadow-sm rounded-lg transition-all duration-200 font-medium"
               >
                 💰 My Wallet
+              </button>
+              <button
+                onClick={() => {
+                  setShowMembershipModal(true);
+                  setShowMenu(false);
+                }}
+                className="w-full text-left px-4 py-3 text-gray-700 hover:bg-white hover:shadow-sm rounded-lg transition-all duration-200 font-medium"
+              >
+                ⭐ Membership
               </button>
               <button
                 onClick={() => {
@@ -279,6 +311,11 @@ const Navbar = () => {
           className="fixed inset-0 bg-black/60 z-40 md:hidden"
           onClick={() => setShowMenu(false)}
         ></div>
+      )}
+
+      {/* Membership Modal */}
+      {showMembershipModal && (
+        <MembershipDetailsModal onClose={() => setShowMembershipModal(false)} />
       )}
     </>
   );

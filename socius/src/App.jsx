@@ -18,11 +18,14 @@ const Contact = lazy(() => import('./pages/Contact'))
 const MyProfile = lazy(() => import('./pages/MyProfile'))
 const MyItems = lazy(() => import('./pages/MyItems'))
 const MyRequests = lazy(() => import('./pages/MyRequests'))
+const MyBorrowings = lazy(() => import('./pages/MyBorrowings'))
 const AddItem = lazy(() => import('./pages/AddItem'))
-const Gateway = lazy(() => import('./pages/Gateway'))
 const ItemDetail = lazy(() => import('./pages/ItemDetail'))
 const Wallet = lazy(() => import('./pages/Wallet'))
+const Membership = lazy(() => import('./pages/Membership'))
+const UploadProfileImage = lazy(() => import('./pages/UploadProfileImage'))
 
+const Checkout = lazy(() => import('./pages/Checkout'))
 
 const App = () => {
   const location = useLocation();
@@ -34,8 +37,8 @@ const App = () => {
   const normalizedPath = location.pathname.replace(/\/$/, '');
   const hideNavbarFooter = [
     '/login',
-    '/gateway',
     '/my-profile',
+    '/upload-profile-image',
   ].includes(normalizedPath);
 
   // Dynamically build the main content class
@@ -67,10 +70,14 @@ const App = () => {
               <Route path='/my-profile' element={<MyProfile />} />
               <Route path='/my-items' element={<MyItems />} />
               <Route path='/my-requests' element={<MyRequests />} />
+              <Route path='/my-borrowings' element={<MyBorrowings />} />
               <Route path='/add-item' element={<AddItem />} />
-              <Route path='/gateway' element={<Gateway />} />
+              <Route path='/add-item' element={<AddItem />} />
               <Route path='/inventory/item/:itemId' element={<ItemDetail />} />
               <Route path='/wallet' element={<Wallet />} />
+              <Route path='/membership' element={<Membership />} />
+              <Route path='/upload-profile-image' element={<UploadProfileImage />} />
+              <Route path='/checkout' element={<Checkout />} />
             </Routes>
           </Suspense>
         </ProfileCompletionGuard>
