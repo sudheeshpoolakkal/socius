@@ -13,6 +13,13 @@ const userSchema = new mongoose.Schema({
   isAnonymous: { type: Boolean, default: false },
   walletBalance: { type: Number, default: 0 },
   transactions: { type: Array, default: [] },
+  isMember: { type: Boolean, default: false },
+  membershipType: { type: String, default: 'None' },
+  membershipExpiry: { type: Date, default: null },
+  karma: {
+    positive: { type: Number, default: 0 },
+    negative: { type: Number, default: 0 }
+  }
 })
 
 // Create a compound index for phone uniqueness only when isAnonymous is true

@@ -5,7 +5,7 @@ import { v2 as cloudinary } from 'cloudinary';
 // API to add a new item
 const addItem = async (req, res) => {
   try {
-    const { name, category, description, address, deposit } = req.body;
+    const { name, category, description, address, deposit, price, isBuyable, isBorrowable } = req.body;
     const imageFile = req.file;
     const owner = req.userId; // Middleware adds this
 
@@ -35,6 +35,9 @@ const addItem = async (req, res) => {
       owner,
       address: parsedAddress,
       deposit: Number(deposit),
+      price: price ? Number(price) : undefined,
+      isBuyable: isBuyable === 'true' || isBuyable === true,
+      isBorrowable: isBorrowable === 'true' || isBorrowable === true,
       available: true,
       date: Date.now()
     };

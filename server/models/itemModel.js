@@ -16,7 +16,14 @@ const itemSchema = new mongoose.Schema({
 
   // Meta
   date: { type: Number, required: true },
-  slots_booked: { type: Object, default: {} } // Keep for now to manage availability dates
+  // Slots
+  slots_booked: { type: Object, default: {} }, // Keep for now to manage availability dates
+
+  // Sale Details
+  price: { type: Number }, // Selling Price
+  isBuyable: { type: Boolean, default: false }, // Is it for sale?
+  isBorrowable: { type: Boolean, default: true }, // Is it for rent?
+  sold: { type: Boolean, default: false } // Has it been sold?
 }, { minimize: false })
 
 const itemModel = mongoose.models.item || mongoose.model("item", itemSchema);
